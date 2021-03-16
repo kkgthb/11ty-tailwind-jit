@@ -1,0 +1,22 @@
+{%- comment -%}Emoji as Favico:  https://stackoverflow.com/a/62438464{%- endcomment -%}
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ctext%20x='0'%20y='14'%3E💄%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+
+{%- if title == blank -%}{%- unless documentData.title == blank %}{%- assign title = documentData.title -%}{%- endunless -%}{%- endif -%}
+{%- if description == blank -%}{%- unless documentData.description == blank %}{%- assign description = documentData.description -%}{%- endunless -%}{%- endif -%}
+{%- if slug == blank -%}{%- unless documentData.slug == blank %}{%- assign slug = documentData.slug -%}{%- endunless -%}{%- endif -%}
+{%- capture titleText -%}{%- if title == 'Home' or slug == '/' -%}{{ site.homeTitle }}{%- elsif title == blank -%}{{ site.title }}{%- else -%}{{ title }} | {{ site.title }}{%- endif -%}{%- endcapture -%}
+{%- capture descriptionText -%}{%- if title == 'Home' or slug == '/' -%}{{ site.description }}{%- else -%}{{ description }}{%- endif -%}{%- endcapture -%}
+
+<title>{{ titleText }}</title>
+
+<meta name="description" contents="{{ descriptionText }}" />
+<meta name="generator" content="Eleventy - 11ty - https://11ty.dev" />
+<link rel="canonical" href="{{ url_to_this_page }}" /><!-- TO DO:  FIX THIS -->
+
+<!-- OG cards -->
+<meta property="og:title" content="{{ titleText }}" />
+<meta property="og:description" content="{{ descriptionText }}" />
+<meta property="og:site_name" content="{{ site.homeTitle }}" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="{{ url_to_this_page }}" /><!-- TO DO:  FIX THIS -->
+<!-- End OG cards -->

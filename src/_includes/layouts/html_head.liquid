@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Begin sync CSS -->
+  <link rel="stylesheet" href="/tailwindoutlive.css?v={% version %}"/>
+  <!-- End sync CSS -->
+  <!-- Begin pre-connect to certain 3rd-party domains like Cloudinary and Google Fonts -->
+  <!--<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>-->
+  <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+  <link rel="preconnect" href="https://rsms.me" crossorigin>
+  <!-- End pre-connect to certain 3rd-party domains like Cloudinary and Google Fonts -->
+  <!-- Begin some asynchronous CSS includes -->
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <!-- End some asynchronous CSS includes -->
+  <!-- Begin no-JS fallback for async CSS includes -->
+  <noscript>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  </noscript>
+  <!-- End no-JS fallback for async CSS includes -->
+  
+  {%- include 'layouts/head_seo' -%}
+</head>

@@ -1,0 +1,20 @@
+# Don't try to do inline comments.  Things break.
+
+# Ignore secrets
+/.env
+/*.env
+/*.env-*
+
+# Ignore clutter from Netlify CLI
+/.netlify
+/.netlify/**
+
+# Ignore "node_modules"
+/node_modules/
+/node_modules/**
+
+# Ignore "dist", my static output folder
+/dist/
+/dist/**
+# Local Netlify folder
+.netlify

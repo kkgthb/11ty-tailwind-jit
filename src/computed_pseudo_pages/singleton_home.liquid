@@ -1,0 +1,34 @@
+---
+layout: layouts/base
+tags: base
+title: Home
+permalink: /
+---
+
+<p>Hello.</p>
+
+<blockquote class="text-blue font-sans text-xl bg-white">
+
+<p>Please note that Liquid <code>{%- raw -%}{{ collections.somekeyword }}{%- endraw -%}</code> templates don't pick up on <code>somekeyword</code> tags set through <code>eleventyComputed</code> during pagination.</p>
+
+<p>You <em>might</em> be able to get at such a tag's items through the JS collections API in a filter/shortcode.</p>
+
+<p>Don't forget that you don't necessarily need to, though.  If you need to paginate them for the sake of making standalone pages, remember -- this is all just data.  You can have a <code>/_data/tags.js</code> file, not just a <code>/_data/posts.js</code> file.  See Knut Melvaer's Sanity-11ty starter.</p>
+
+</blockquote>
+
+<h2>Pages <i>({{ collections.pages.size }})</i></h2>
+
+<ul>
+{% for item in collections.pages %}
+  <li><a href="{{ item.url | url }}">{{ item.data.title }}</a> <i>({{ item.url }})</i></li>
+{% endfor %}
+</ul>
+
+<h2>Collection items: {{ collections.all.size }}</h2>
+
+<ul>
+{% for item in collections.pages %}
+  <li><a href="{{ item.url | url }}">{{ item.data.title }}</a> <i>({{ item.url }})</i></li>
+{% endfor %}
+</ul>
