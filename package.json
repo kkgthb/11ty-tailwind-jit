@@ -15,6 +15,7 @@
     "@11ty/eleventy": "latest",
     "@tailwindcss/jit": "latest",
     "autoprefixer": "latest",
+    "dotenv": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",
     "sass": "latest",

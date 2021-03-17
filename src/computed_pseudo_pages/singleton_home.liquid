@@ -1,6 +1,6 @@
 ---
 layout: layouts/base
-tags: base
+tags: pages
 title: Home
 permalink: /
 ---
@@ -21,14 +21,14 @@ permalink: /
 
 <ul>
 {% for item in collections.pages %}
-  <li><a href="{{ item.url | url }}">{{ item.data.title }}</a> <i>({{ item.url }})</i></li>
+  <li><a href="{{ item.url | url }}">{{ item.data.title }} <i>({{ item.url }})</i></a></li>
 {% endfor %}
 </ul>
 
 <h2>Collection items: {{ collections.all.size }}</h2>
 
 <ul>
-{% for item in collections.pages %}
-  <li><a href="{{ item.url | url }}">{{ item.data.title }}</a> <i>({{ item.url }})</i></li>
+{% for item in collections.all %}
+  <li><a href="{{ item.url | url }}">{{ item.data.title }} <i>({{ item.url }})</i></a></li>
 {% endfor %}
 </ul>
