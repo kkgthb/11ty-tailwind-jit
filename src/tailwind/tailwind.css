@@ -1,3 +1,4 @@
+/* {% version %} */
 /* @tailwind base; */ /* skip this to make it easier to see changes in output */
 @tailwind components;
 @tailwind utilities;

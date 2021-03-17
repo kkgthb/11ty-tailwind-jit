@@ -9,8 +9,8 @@
     "css:watch": "npm run css -- --watch",
     "css:build": "npm run css",
     "build": "npx eleventy & npm run css:build",
-    "dev": "npx eleventy --watch --serve & npm run css:watch",
-    "develop": "npx eleventy --watch --serve & npm run css:build",
+    "dev": "npx eleventy --watch --serve",
+    "develop": "npx eleventy --watch --serve",
     "now-build": "npm run build",
     "debug": "DEBUG=* npx eleventy"
   },
