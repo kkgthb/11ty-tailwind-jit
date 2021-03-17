@@ -5,9 +5,12 @@
   "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx eleventy",
-    "dev": "npx eleventy --watch --serve",
-    "develop": "npx eleventy --watch --serve",
+    "css": "postcss src/tailwind/tailwind.css -o dist/tailwindout.css --verbose",
+    "css:watch": "npm run css -- --watch",
+    "css:build": "npm run css",
+    "build": "npx eleventy & npm run css:build",
+    "dev": "npx eleventy --watch --serve & npm run css:watch",
+    "develop": "npx eleventy --watch --serve & npm run css:build",
     "now-build": "npm run build",
     "debug": "DEBUG=* npx eleventy"
   },

@@ -29,6 +29,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
   });
+  // Because we're running PostCSS as a separate process, Eleventy doesn't know when styles have changed
+  // Tell Eleventy to watch this CSS file so it can live-update changes into the browser for us
+  eleventyConfig.addWatchTarget("./dist/tailwindoutlive.css");
 
   // Clarify which folder is for input and which folder is for output
   return {
