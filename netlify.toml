@@ -6,3 +6,7 @@
   base = "./"
   command = "npm run dev"
   publish = "dist"
+[build.environment]
+  # Use a local non-Git-tracked .env file to set this to "development"; 
+  # "netlify dev" picks up ".env" and "netlify build" does not.
+  NODE_ENV = "production"

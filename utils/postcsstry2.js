@@ -10,5 +10,8 @@ const postCssPlugins = [
 module.exports = async function (cssInputFilePathParam) {
   const cssInputFilePath = path.join("./src/", cssInputFilePathParam);
   const rawCss = await fs.readFile(cssInputFilePath);
-  return await postCss(postCssPlugins).process(rawCss, { from: cssInputFilePath });
+  const outCss = await postCss(...postCssPlugins).process(rawCss, {
+    from: cssInputFilePath,
+  });
+  return outCss;
 };

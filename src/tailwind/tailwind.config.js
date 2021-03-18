@@ -551,7 +551,12 @@ let extendScreens = {
 
 module.exports = {
   purge: {
-    content: ["./dist/**/*.html"],
+    content: [
+      "./dist/**/*.html",
+      "./src/**/*.liquid",
+      "./src/**/*.njk",
+      "./src/**/*.html",
+    ],
     options: {
       safelist: [],
     },
