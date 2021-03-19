@@ -11,19 +11,8 @@ module.exports = (eleventyConfig) => {
     strict_filters: true,
   });
 
-  // Pass front-end JS straight through from "src" to "dist"
-  eleventyConfig.addPassthroughCopy("./src/static/js/");
-
-  // Override the terrible slugifier that comes with 11ty
-  const slugify = require("slugify");
-  eleventyConfig.addFilter("slug", (input) => {
-    const options = {
-      replacement: "-",
-      remove: /[&,+()$~%.'":*?<>{}]/g,
-      lower: true,
-    };
-    return slugify(input, options);
-  });
+  // Pass "static" things straight through from "src" to "dist"
+  eleventyConfig.addPassthroughCopy("./src/static/");
 
   // Tailwind stuff
   eleventyConfig.addShortcode("version", function () {
