@@ -18,3 +18,5 @@
 /dist/**
 # Local Netlify folder
 .netlify
+
+valsby.sh

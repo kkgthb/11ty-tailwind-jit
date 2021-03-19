@@ -1,0 +1,18 @@
+stackbitVersion: ~0.3.0
+ssgName: eleventy
+buildCommand: npm run build
+publishDir: dist
+pagesDir: src
+uploadDir: src/static/uploads
+assets:
+  referenceType: static
+  assetsDir: src/static/assets
+  publicPath: /
+  uploadDir: src/static/uploads
+models:
+  home_page:
+    type: page
+    label: Page
+    singleInstance: true
+    urlPath: "/"
+    file: "markdown/flexible_pages/home.md"
