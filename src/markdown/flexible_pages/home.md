@@ -17,7 +17,7 @@ exercise:
     link:
         url: /tailwindoutlive.css
         text: See your current CSS file
-footer: This exercise brought to you by <a href="https://katiekodes.com/" target="_blank">Katie Kodes</a>
+footer: This exercise brought to you by <a href="https://katiekodes.com/" target="_blank" rel="noopener">Katie Kodes</a>
 ---
 
 {% include 'components/call_to_action.liquid' the_include:cta %}
