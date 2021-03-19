@@ -1,5 +1,6 @@
 stackbitVersion: ~0.3.0
 ssgName: eleventy
+nodeVersion: 15
 buildCommand: npm run build
 publishDir: dist
 pagesDir: src
