@@ -29,7 +29,7 @@ You don't really need this "starter" to play with Tailwind.  Just grab these fil
 Your `package.json` will need a few dependencies:
 
 ```json
-[
+{
     "@11ty/eleventy": "latest",
     "@tailwindcss/jit": "latest",
     "autoprefixer": "latest",
@@ -37,7 +37,7 @@ Your `package.json` will need a few dependencies:
     "postcss-cli": "latest",
     "sass": "latest",
     "tailwindcss": "latest"
-]
+}
 ```
 
 And your `.eleventy.js` config could use a little help:
