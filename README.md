@@ -12,4 +12,43 @@ Known issue:  every once in a while, particularly as you start overwhelming Tail
 
 Solution:  restart your server once or twice.  Now that Tailwind JIT builds quickly, rather than taking up to a minute like legacy Tailwind, you should be fine, other than it being a bit of a nuisance.
 
-Live example at [https://11tytailwindjit.netlify.app/](https://11tytailwindjit.netlify.app/)
+## Live example
+
+[See this site live on Netlify](https://11tytailwindjit.netlify.app/)
+
+## Build your own theme
+
+You don't really need this "starter" to play with Tailwind.  Just grab these files:
+
+1. [/src/_data/tailwindcss.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/src/_data/tailwindcss.js){:target="_blank"}
+2. [the 2 files under /src/tailwind](https://github.com/kkgthb/11ty-tailwind-jit/tree/main/src/tailwind){:target="_blank"}
+    * _(you should probably change the config to be a little more specific to your use of Tailwind)_
+3. [/src/postcss.config.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/src/postcss.config.js){:target="_blank"}
+4. [/utils/postcss.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/utils/postcss.js){:target="_blank"}
+
+Your `package.json` will need a few dependencies:
+
+```json
+[
+    "@11ty/eleventy": "latest",
+    "@tailwindcss/jit": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest",
+    "sass": "latest",
+    "tailwindcss": "latest"
+]
+```
+
+And your `.eleventy.js` config could use a little help:
+
+```js
+  // Sometimes handy for making sure your browser refreshes the CSS
+  eleventyConfig.addShortcode("version", function () {
+    return String(Date.now());
+  });
+  // Apparently this, on top of the PostCSS pruning options watching 11ty, helps 11ty watch Tailwind or something.
+  eleventyConfig.addWatchTarget("./dist/tailwindoutlive.css");
+```
+
+Sprinkle them into _any_ starter and ... ta-daaaa!  It's a Tailwind starter.
