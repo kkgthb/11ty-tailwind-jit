@@ -20,11 +20,11 @@ Solution:  restart your server once or twice.  Now that Tailwind JIT builds quic
 
 You don't really need this "starter" to play with Tailwind.  Just grab these files:
 
-1. [/src/_data/tailwindcss.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/src/_data/tailwindcss.js){:target="_blank"}
-2. [the 2 files under /src/tailwind](https://github.com/kkgthb/11ty-tailwind-jit/tree/main/src/tailwind){:target="_blank"}
+1. [/src/_data/tailwindcss.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/src/_data/tailwindcss.js)
+2. [the 2 files under /src/tailwind](https://github.com/kkgthb/11ty-tailwind-jit/tree/main/src/tailwind)
     * _(you should probably change the config to be a little more specific to your use of Tailwind)_
-3. [/src/postcss.config.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/src/postcss.config.js){:target="_blank"}
-4. [/utils/postcss.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/utils/postcss.js){:target="_blank"}
+3. [/src/postcss.config.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/src/postcss.config.js)
+4. [/utils/postcss.js](https://github.com/kkgthb/11ty-tailwind-jit/blob/main/utils/postcss.js)
 
 Your `package.json` will need a few dependencies:
 
