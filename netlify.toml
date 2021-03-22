@@ -10,3 +10,9 @@
   # Use a local non-Git-tracked .env file to set this to "development"; 
   # "netlify dev" picks up ".env" and "netlify build" does not.
   NODE_ENV = "production"
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  branches = ["main"]
+  mainBranch: "main"
+  template = "hierarchical"
