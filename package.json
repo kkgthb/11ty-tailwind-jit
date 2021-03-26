@@ -23,9 +23,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css": "postcss src/tailwind/tailwind.css -o dist/tailwindout.css --verbose",
-    "css:watch": "npm run css -- --watch",
-    "css:build": "npm run css",
     "build": "npx eleventy",
     "dev": "npx eleventy --watch --serve",
     "develop": "npx eleventy --watch --serve",

@@ -8,9 +8,27 @@ Many thanks to [Darrik Moberg](https://www.darrik.dev/) for the code on which th
 
 Thanks also to [Mike Allanson](https://www.mikeallanson.com/) for additional troubleshooting.
 
-Known issue:  every once in a while, particularly as you start overwhelming Tailwind JIT with things like plugins and a larger template codebase, your changes might stop taking effect on the screen served by your running development server _(you can see that things stop getting freshly written out to `/dist/tailwindoutlive.css`)_.
+## Known issues
 
-Solution:  restart your server once or twice.  Now that Tailwind JIT builds quickly, rather than taking up to a minute like legacy Tailwind, you should be fine, other than it being a bit of a nuisance.
+### Issue 1
+
+Every once in a while, particularly as you start overwhelming Tailwind JIT with things like plugins and a larger template codebase, your changes might stop taking effect on the screen served by your running development server _(you can see that things stop getting freshly written out to `/dist/tailwindoutlive.css`)_.
+
+#### Solution 1
+
+Restart your server once or twice.  Now that Tailwind JIT builds quickly, rather than taking up to a minute like legacy Tailwind, you should be fine, other than it being a bit of a nuisance.
+
+### Issue 2
+
+Tailwind seems to be sensitive to the value of the `NODE_ENV` environment variable, and this might not work w/ null values for that variable.
+
+#### Solution 2
+
+Make sure to adjust your build process to set it to `production` or `development` appropriately.  You might do this through `package.json` if you're running simple commands.
+
+Personally, I enjoy the environment-variable injection of built-site-hosting CLI tools like the Netlify CLI _(which makes use of server-stored environment variable values, values set in `netlify.toml`, and, while running `netlify dev`, values set in `.env` files on your local machine)_, and keeping my `package.json` files clean.
+
+I prefer the CLI tool approach because I typically code on a Windows machine but deploy to a Linux machine, which I find messy to code `package.json` around.
 
 ## Live example
 

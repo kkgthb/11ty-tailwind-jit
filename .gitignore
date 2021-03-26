@@ -6,6 +6,7 @@
 /*.env-*
 
 # Ignore clutter from Netlify CLI
+.netlify
 /.netlify
 /.netlify/**
 
@@ -16,7 +17,5 @@
 # Ignore "dist", my static output folder
 /dist/
 /dist/**
-# Local Netlify folder
-.netlify
 
 valsby.sh
