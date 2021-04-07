@@ -1,6 +1,6 @@
 {
   "name": "11ty-tailwind-jit-starter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An 11ty starter to help you enjoy Tailwind Just-In-Time CSS",
   "author": {
     "name": "Katie Kodes",
@@ -23,19 +23,19 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx eleventy",
-    "dev": "npx eleventy --watch --serve",
-    "develop": "npx eleventy --watch --serve",
-    "now-build": "npm run build",
+    "build": "cross-env NODE_ENV=production npx eleventy",
+    "dev": "cross-env NODE_ENV=development npx eleventy --watch --serve",
+    "develop": "cross-env NODE_ENV=development npx eleventy --watch --serve",
+    "now-build": "cross-env NODE_ENV=production npm run build",
     "debug": "DEBUG=* npx eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "latest",
     "@tailwindcss/jit": "latest",
     "autoprefixer": "latest",
+    "cross-env": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",
-    "sass": "latest",
     "tailwindcss": "latest"
   }
 }

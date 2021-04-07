@@ -51,9 +51,9 @@ Your `package.json` will need a few dependencies:
     "@11ty/eleventy": "latest",
     "@tailwindcss/jit": "latest",
     "autoprefixer": "latest",
+    "cross-env": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",
-    "sass": "latest",
     "tailwindcss": "latest"
 }
 ```
