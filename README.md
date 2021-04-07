@@ -70,3 +70,7 @@ And your `.eleventy.js` config could use a little help:
 ```
 
 Sprinkle them into _any_ starter and ... ta-daaaa!  It's a Tailwind starter.
+
+## Postscript
+
+I sort-of did a [Gatsby Tailwind JIT starter](https://github.com/kkgthb/web-site-gatsby-07-tailwind-jit) as well.  Maybe one day I'll make a proper starter, rather than just bolting Tailwind JIT onto an old project, but I'm pretty mediocre at React, so maybe I won't.
