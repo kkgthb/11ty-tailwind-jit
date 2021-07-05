@@ -14,6 +14,10 @@
     {
       "name": "Mike Allanson",
       "url": "https://www.mikeallanson.com/"
+    },
+    {
+      "name": "Aravind Voggu",
+      "url": "https://avoggu.com/"
     }
   ],
   "main": ".eleventy.js",
@@ -30,12 +34,10 @@
     "debug": "DEBUG=* npx eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "latest",
-    "@tailwindcss/jit": "latest",
-    "autoprefixer": "latest",
-    "cross-env": "latest",
-    "postcss": "latest",
-    "postcss-cli": "latest",
-    "tailwindcss": "latest"
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.6",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
   }
 }
