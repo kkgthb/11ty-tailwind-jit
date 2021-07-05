@@ -16,7 +16,9 @@ module.exports = (eleventyConfig) => {
 
   // Tailwind stuff
   eleventyConfig.addShortcode("version", function () {
-    return String(Date.now());
+    // Return empty string in prod so browser can cache.
+    if (process.env.NODE_ENV === "production") return "";
+    return `?v=${String(Date.now())}`;
   });
   // Because we're running PostCSS as a separate process, Eleventy doesn't know when styles have changed
   // Tell Eleventy to watch this CSS file so it can live-update changes into the browser for us
